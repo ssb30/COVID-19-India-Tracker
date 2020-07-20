@@ -138,9 +138,9 @@ body = html.Div(className='row no-gutters',
                                                         html.Div([
                                                             dbc.Row(
                                                                 [
-                                                                    dbc.Button('Cummulative',
+                                                                    dbc.Button('Cumulative',
                                                                                className='btn btn-outline-secondary',
-                                                                               id='cummulative'),
+                                                                               id='cumulative'),
                                                                     dbc.Button('Daily',
                                                                                className='btn btn-outline-secondary',
                                                                                id='Daily'),
@@ -149,33 +149,33 @@ body = html.Div(className='row no-gutters',
                                                                 , justify="center", no_gutters=True),
                                                         ]),
                                                         html.Br(),
-                                                        html.H3('CONFIRMED CUMMULATIVE', className='text-danger',
+                                                        html.H3('CONFIRMED CUMULATIVE', className='text-danger',
                                                                 style={'text-align': 'center'}),
-                                                        dcc.Graph(id='confirmed_cummulative'),
+                                                        dcc.Graph(id='confirmed_cumulative'),
                                                         html.H3('CONFIRMED DAILY', className='text-danger',
                                                                 style={'text-align': 'center'}),
                                                         dcc.Graph(id='confirmed_daily'),
-                                                        html.H3('ACTIVE CUMMULATIVE', className='text-info',
+                                                        html.H3('ACTIVE CUMULATIVE', className='text-info',
                                                                 style={'text-align': 'center'}),
-                                                        dcc.Graph(id='active_cummulative'),
+                                                        dcc.Graph(id='active_cumulative'),
                                                         html.H3('ACTIVE DAILY', className='text-info',
                                                                 style={'text-align': 'center'}),
                                                         dcc.Graph(id='active_daily'),
-                                                        html.H3('RECOVERED CUMMULATIVE', className="text-success",
+                                                        html.H3('RECOVERED CUMULATIVE', className="text-success",
                                                                 style={'text-align': 'center'}),
-                                                        dcc.Graph(id='recovered_cummulative'),
+                                                        dcc.Graph(id='recovered_cumulative'),
                                                         html.H3('RECOVERED DAILY', className="text-success",
                                                                 style={'text-align': 'center'}),
                                                         dcc.Graph(id='recovered_daily'),
-                                                        html.H3('DEATHS CUMMULATIVE', className="text-secondary",
+                                                        html.H3('DEATHS CUMULATIVE', className="text-secondary",
                                                                 style={'text-align': 'center'}),
-                                                        dcc.Graph(id='deaths_cummulative'),
+                                                        dcc.Graph(id='deaths_cumulative'),
                                                         html.H3('DEATHS DAILY', className="text-secondary",
                                                                 style={'text-align': 'center'}),
                                                         dcc.Graph(id='deaths_daily'),
-                                                        html.H3('TESTED CUMMULATIVE', className="text-muted",
+                                                        html.H3('TESTED CUMULATIVE', className="text-muted",
                                                                 style={'text-align': 'center'}),
-                                                        dcc.Graph(id='tests_cummulative'),
+                                                        dcc.Graph(id='tests_cumulative'),
                                                         html.H3('TESTED DAILY', className="text-muted",
                                                                 style={'text-align': 'center'}),
                                                         dcc.Graph(id='tests_daily')
@@ -190,8 +190,8 @@ app.layout = html.Div([nav, breaks, body])
 
 
 @app.callback(
-    Output(component_id='confirmed_cummulative', component_property='figure'),
-    [Input(component_id='cummulative', component_property='n_clicks')]
+    Output(component_id='confirmed_cumulative', component_property='figure'),
+    [Input(component_id='cumulative', component_property='n_clicks')]
 )
 def update_output(n_clicks):
     if n_clicks is None:
@@ -201,8 +201,8 @@ def update_output(n_clicks):
 
 
 @app.callback(
-    Output(component_id='active_cummulative', component_property='figure'),
-    [Input(component_id='cummulative', component_property='n_clicks')]
+    Output(component_id='active_cumulative', component_property='figure'),
+    [Input(component_id='cumulative', component_property='n_clicks')]
 )
 def update_output1(n_clicks):
     if n_clicks is None:
@@ -212,8 +212,8 @@ def update_output1(n_clicks):
 
 
 @app.callback(
-    Output(component_id='recovered_cummulative', component_property='figure'),
-    [Input(component_id='cummulative', component_property='n_clicks')]
+    Output(component_id='recovered_cumulative', component_property='figure'),
+    [Input(component_id='cumulative', component_property='n_clicks')]
 )
 def update_output1(n_clicks):
     if n_clicks is None:
@@ -223,8 +223,8 @@ def update_output1(n_clicks):
 
 
 @app.callback(
-    Output(component_id='deaths_cummulative', component_property='figure'),
-    [Input(component_id='cummulative', component_property='n_clicks')]
+    Output(component_id='deaths_cumulative', component_property='figure'),
+    [Input(component_id='cumulative', component_property='n_clicks')]
 )
 def update_output1(n_clicks):
     if n_clicks is None:
@@ -234,8 +234,8 @@ def update_output1(n_clicks):
 
 
 @app.callback(
-    Output(component_id='tests_cummulative', component_property='figure'),
-    [Input(component_id='cummulative', component_property='n_clicks')]
+    Output(component_id='tests_cumulative', component_property='figure'),
+    [Input(component_id='cumulative', component_property='n_clicks')]
 )
 def update_output1(n_clicks):
     if n_clicks is None:
